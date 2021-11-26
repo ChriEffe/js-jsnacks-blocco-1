@@ -6,12 +6,23 @@ const listName = ['Aldo', 'Giovanni', 'Giacomo', 'Ringhio', 'Claudia'];
 // Chiedo nome utente
 const nameUser = prompt('Inserisci nome invito');
 
+// Valore booleano, "find" è di base 'false'
 let find = false;
 
-for (let i = 0; i < listName.length; i++) {
+// Ciclo per controllare se i nomi coincidono
+/*for (let i = 0; i < listName.length; i++) {
     if (listName[i].toLowerCase() == nameUser.toLowerCase()) {
          find = true;
     }
+}*/
+
+// Ciclo while
+let i = 0;
+while (i < listName.length && find == false) {
+    if (listName[i].toLowerCase() == nameUser.toLowerCase()) {
+        find = true;
+    }
+    i++;
 }
 
 if (find == true) {
@@ -23,9 +34,3 @@ if (find == true) {
 console.log('Lista invitati ' + listName);
 console.log('Nome utente ' + nameUser);
 console.log('Esito ' + find);
-
-
-
-
-
-     
